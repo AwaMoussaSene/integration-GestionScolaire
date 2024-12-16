@@ -6,45 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Absences - Étudiant</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body class="bg-gray-100 h-screen">
 
     <div class="flex h-full">
-        <div class="w-64 bg-[#06045A] text-white flex flex-col">
-            <div class="p-4 text-center">
+        <div id="sidebar" class="w-64 bg-[#06045A] text-white flex flex-col transition-all duration-300">
+            <div class="p-4 flex justify-between items-center">
+              <div class="flex items-center space-x-2">
                 <h1 class="text-2xl font-bold">Ecole 221</h1>
+              </div>
+              <button id="toggleSidebar" class="text-white bg-white text-2xl focus:outline-none mt-2 h-8 rounded">
+                <i class='bx bx-chevron-left text-black'></i>
+              </button>
             </div>
             <nav class="flex-grow">
-                <ul>
-                    <li class="px-6 py-2 hover:bg-blue-700">
-                        <a href="#" class="flex items-center space-x-2">
-                            <span class="text-lg">🏠</span>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="px-6 py-2 hover:bg-blue-700">
-                        <a href="listeCours.html" class="flex items-center space-x-2">
-                            <span class="text-lg">📚</span>
-                            <span>Mes Cours</span>
-                        </a>
-                    </li>
-                    <li class="px-6 py-2 hover:bg-blue-700">
-                        <a href="listeAbsence.html" class="flex items-center space-x-2">
-                            <span class="text-lg">📅</span>
-                            <span>Mes Absences</span>
-                        </a>
-                    </li>
-                </ul>
+              <ul>
+                <li class="px-6 py-2 hover:bg-blue-700 flex items-center mt-5 space-x-2">
+                  <a href="#" class="text-lg flex items-center space-x-2">
+                    <span class="material-icons text-blue-400">dashboard</span>
+                    <span class="menu-text">Dashboard</span>
+                  </a>
+                </li>
+                <li class="px-6 py-2 hover:bg-blue-700 flex items-center space-x-2">
+                  <a href="listeCours.html" class="text-lg flex items-center space-x-2">
+                    <span class="material-icons text-yellow-400">book</span>
+                    <span class="menu-text">Liste Cours</span>
+                  </a>
+                </li>
+                <li class="px-6 py-2 hover:bg-blue-700 flex items-center space-x-2">
+                  <a href="listeAbsence.html" class="text-lg flex items-center space-x-2">
+                    <span class="material-icons text-red-400">event_note</span>
+                    <span class="menu-text">Liste Absence</span>
+                  </a>
+                </li>
+              </ul>
             </nav>
-            <div class="fixed bottom-0 w-64 p-4 text-center border-t border-blue-700 bg-[#06045A]">
-                <a href="login.html" class="flex items-center space-x-2">
-                <button class="w-full bg-red-500 text-white hover:bg-red-600 py-2 rounded">
-                    Déconnexion
+            <div class="p-4 border-t border-blue-700 bg-[#06045A]">
+              <a href="login.html" class="flex items-center space-x-2">
+                <button class="w-full bg-red-500 text-white hover:bg-red-600 py-2 rounded flex items-center justify-center">
+                  <span class="material-icons mr-2">logout</span>
+                  <span class="menu-text">Déconnexion</span>
                 </button>
-            </a>
+              </a>
             </div>
-        </div>
+          </div>
         <div class="flex-grow flex flex-col">
             <header class="bg-white shadow p-4 flex justify-between items-center">
                 <h2 class="text-2xl font-bold text-gray-700">Mes Absences</h2>
@@ -101,6 +111,7 @@
             </main>
         </div>
     </div>
+    <script src="../src/script.js"></script>
 
 </body>
 

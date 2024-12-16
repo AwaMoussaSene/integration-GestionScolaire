@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,20 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css" rel="stylesheet">
-  <style>
-    /* Ajoutons une transition pour le déplacement du bouton */
-    #toggleSidebar {
-      transition: transform 0.3s ease;
-    }
-
-    /* Lorsque la sidebar est fermée (taille 20), on déplace le bouton sous "Ecole 221" */
-    #sidebar.w-20 #toggleSidebar {
-      transform: translateY(50px); /* Le bouton se déplace en bas de l'en-tête */
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="bg-gray-100 h-screen flex">
 
-  <!-- Sidebar -->
   <div id="sidebar" class="w-64 bg-[#06045A] text-white flex flex-col transition-all duration-300">
-    <!-- Header Sidebar -->
     <div class="p-4 flex justify-between items-center">
       <div class="flex items-center space-x-2">
         <h1 class="text-2xl font-bold">Ecole 221</h1>
       </div>
       <button id="toggleSidebar" class="text-white bg-white text-2xl focus:outline-none mt-2 h-8 rounded">
-        <i class='bx bx-chevron-left text-black'></i> <!-- Flèche pour fermer -->
+        <i class='bx bx-chevron-left text-black'></i>
       </button>
     </div>
-    <!-- Navigation -->
     <nav class="flex-grow">
       <ul>
         <li class="px-6 py-2 hover:bg-blue-700 flex items-center mt-5 space-x-2">
@@ -55,7 +44,6 @@
         </li>
       </ul>
     </nav>
-    <!-- Footer -->
     <div class="p-4 border-t border-blue-700 bg-[#06045A]">
       <a href="login.html" class="flex items-center space-x-2">
         <button class="w-full bg-red-500 text-white hover:bg-red-600 py-2 rounded flex items-center justify-center">
@@ -65,8 +53,6 @@
       </a>
     </div>
   </div>
-
-  <!-- Main Content -->
   <div class="flex-grow flex flex-col">
     <header class="bg-white shadow p-4 flex justify-between items-center">
       <h2 class="text-2xl font-bold text-gray-700">Bienvenue dans l'espace étudiant</h2>
@@ -85,13 +71,14 @@
         <h4 class="text-lg font-semibold text-gray-700 mb-4">Liste de mes cours</h4>
         <div class="flex justify-end mb-4">
           <label for="semestre" class="block text-gray-600 font-medium mr-2 self-center">Semestre :</label>
-          <select id="semestre" class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <select id="semestre"
+            class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option>Semestre 1</option>
             <option>Semestre 2</option>
           </select>
         </div>
-        <table class="table-auto w-full border-collapse border border-gray-300">
-          <thead>
+        <table class="table-auto w-full border-collapse border border-gray-300" >
+          <thead >
             <tr class="bg-[#06045A] text-white">
               <th class="border border-gray-300 px-4 py-2">Module</th>
               <th class="border border-gray-300 px-4 py-2">Professeur</th>
@@ -99,23 +86,8 @@
               <th class="border border-gray-300 px-4 py-2">Action</th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="bg-white hover:bg-gray-100">
-              <td class="border border-gray-300 px-4 py-2">UML</td>
-              <td class="border border-gray-300 px-4 py-2">M. Wane</td>
-              <td class="border border-gray-300 px-4 py-2">Semestre 1</td>
-              <td class="border border-gray-300 px-4 py-2 text-center">
-                <a href="sceance.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Voir Séances</a>
-              </td>
-            </tr>
-            <tr class="bg-white hover:bg-gray-100">
-              <td class="border border-gray-300 px-4 py-2">UI/UX</td>
-              <td class="border border-gray-300 px-4 py-2">M. Diouf</td>
-              <td class="border border-gray-300 px-4 py-2">Semestre 2</td>
-              <td class="border border-gray-300 px-4 py-2 text-center">
-                <a href="sceance.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Voir Séances</a>
-              </td>
-            </tr>
+          <tbody id="tBodyCours">
+              <!-- tr -->
           </tbody>
         </table>
         <div class="flex justify-center mt-10">
@@ -131,24 +103,7 @@
     </main>
   </div>
 
-  <!-- JavaScript -->
-  <script>
-    const sidebar = document.getElementById('sidebar');
-    const toggleSidebar = document.getElementById('toggleSidebar');
-    const menuText = document.querySelectorAll('.menu-text');
-
-    toggleSidebar.addEventListener('click', () => {
-      sidebar.classList.toggle('w-64');
-      sidebar.classList.toggle('w-20');
-      const icon = toggleSidebar.querySelector('i');
-      icon.classList.toggle('bx-chevron-left');
-      icon.classList.toggle('bx-chevron-right');
-
-      // Afficher/Masquer le texte des éléments de menu
-      menuText.forEach(text => {
-        text.style.display = sidebar.classList.contains('w-64') ? 'inline' : 'none';
-      });
-    });
-  </script>
+  <script src="../src/script.js"></script>
 </body>
+
 </html>
