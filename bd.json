@@ -13,7 +13,7 @@
         "nom": "Fatou Diop",
         "adresse": "Thiès, Grand Standing",
         "login": "fatoud",
-        "pwd": "password456",
+        "pwd": "passer",
         "idClasse": 2
       },
       {
@@ -95,13 +95,13 @@
     "Professeurs": [
       {
         "idProf": 1,
-        "nom": "Prof.  Wane",
+        "nom": "M.  Wane",
         "grade": "Titulaire",
         "specialite": "Génie Logiciel"
       },
       {
         "idProf": 2,
-        "nom": "Prof. Diouf",
+        "nom": "M. Diouf",
         "grade": "Assistant",
         "specialite": "Design UI/UX"
       }
@@ -111,31 +111,83 @@
         "idSeance": 1,
         "dateCour": "2024-01-01",
         "heureDebut": "08:00",
-        "heureFin": "10:00",
+        "heureFin": "21:00",
         "type": "présentiel",
         "idCours": 1
       },
       {
         "idSeance": 2,
         "dateCour": "2024-01-02",
-        "heureDebut": "10:00",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "présentiel",
+        "idCours": 1
+      }, {
+        "idSeance": 3,
+        "dateCour": "2024-01-03",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "présentiel",
+        "idCours": 1
+      }, {
+        "idSeance": 4,
+        "dateCour": "2024-01-04",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "présentiel",
+        "idCours": 1
+      }, {
+        "idSeance": 5,
+        "dateCour": "2024-01-05",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "ligne",
+        "idCours": 1
+      }, {
+        "idSeance": 6,
+        "dateCour": "2024-01-06",
+        "heureDebut": "09:00",
+        "heureFin": "13:00",
+        "type": "présentiel",
+        "idCours": 1
+      }, {
+        "idSeance": 8,
+        "dateCour": "2024-01-09",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "ligne",
+        "idCours": 1
+      },
+      {
+        "idSeance": 9,
+        "dateCour": "2024-01-10",
+        "heureDebut": "18:00",
         "heureFin": "12:00",
         "type": "en ligne",
         "idCours": 2
       },
       {
-        "idSeance": 3,
-        "dateCour": "2024-02-01",
-        "heureDebut": "08:00",
-        "heureFin": "10:00",
+        "idSeance": 10,
+        "dateCour": "2024-01-11",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
+        "type": "presentiel",
+        "idCours": 2
+      },
+      
+      {
+        "idSeance": 11,
+        "dateCour": "2024-02-12",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
         "type": "présentiel",
         "idCours": 3
       },
       {
-        "idSeance": 4,
-        "dateCour": "2024-02-02",
-        "heureDebut": "10:00",
-        "heureFin": "12:00",
+        "idSeance": 12,
+        "dateCour": "2024-02-13",
+        "heureDebut": "18:00",
+        "heureFin": "21:00",
         "type": "en ligne",
         "idCours": 4
       }
